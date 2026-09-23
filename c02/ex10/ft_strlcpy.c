@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	src_count;
@@ -22,17 +24,15 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (src_count);
 }
 
-#include <stdio.h>
-int main(void)
+int	main(void)
 {
-	char src[] = "Hello, World!";
-	char dest[20];
-	unsigned int size = 10;
-	unsigned int copied;
+	char			src[] = "Hello, World!";
+	char			dest[20];
+	unsigned int	size = 10;
+	unsigned int	copied;
 
 	copied = ft_strlcpy(dest, src, size);
 	printf("Copied: %u\n", copied);
 	printf("Destination: %s\n", dest);
-
-	return 0;
+	return (0);
 }

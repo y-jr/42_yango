@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
@@ -16,12 +18,13 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-#include <stdio.h>
-int main(void){
-	char dest[12];
-	char *src = "Angola";
+int	main(void)
+{
+	char	dest[12];
+	char	*src;
 
+	src = "Angola";
 	ft_strncpy(dest, src, 5);
-	printf("Destino fica com: %s",dest);
-	return 0;
+	printf("Destino fica com: %s\n", dest);
+	return (0);
 }

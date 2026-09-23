@@ -1,21 +1,23 @@
-char *ft_strlowcase(char *str){
-	unsigned int i;
+#include <stdio.h>
+
+char	*ft_strlowcase(char *str)
+{
+	unsigned int	i;
 
 	i = 0;
-	while(str[i] != '\0'){
-		if(str[i] >= 'A' && str[i] <= 'Z')
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] = str[i] + 32;
 		i++;
 	}
-
-	return str;
+	return (str);
 }
-#include <stdio.h>
-int main(void){
-	char str1[] = "Angola E Um PORTUGAL ONU";
-	
 
-	printf("%s\n", ft_strlowcase(str1)); 
+int	main(void)
+{
+	char	str1[] = "Angola E Um PORTUGAL ONU";
 
-	return 0;
+	printf("%s\n", ft_strlowcase(str1));
+	return (0);
 }
